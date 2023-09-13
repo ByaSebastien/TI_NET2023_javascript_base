@@ -1,0 +1,57 @@
+body {
+    background-color: aquamarine;
+}
+
+button {
+    background-color: darkgreen;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 100%;
+    box-shadow: -10px 10px 5px orangered,
+        10px -10px 5px green,
+        -10px -10px 5px purple,
+        10px 10px 5px cyan;
+}
+
+button:hover {
+    background-color: darkgoldenrod;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.taskItem {
+    display: flex;
+    align-items: center;
+    box-shadow: -10px 10px 5px orangered,
+        10px -10px 5px green,
+        -10px -10px 5px purple,
+        10px 10px 5px cyan;
+}
+
+.invisible {
+    display: none;
+}
+
+li:hover {
+    background-color: purple;
+}
+
+ul {
+    flex-basis: 20%;
+    background-color: violet;
+    width: fit-content;
+    min-height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    width: fit-content;
+    background: chartreuse;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

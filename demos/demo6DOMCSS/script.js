@@ -20,3 +20,12 @@ for (let li of myList.children) {
         elem.innerText = "coucou";
     });
 }
+
+let numbers = [1, 2, 3, 4, 5];
+
+let pow2 = numbers.map(
+    (n) => n * n
+);
+
+console.log(numbers);
+console.log(pow2);

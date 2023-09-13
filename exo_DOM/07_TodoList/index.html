@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exo todo list</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exo Todo list</h1>
+    </header>
+    <main>
+        <input type="text" id="taskInput" placeholder="Votre tâche">
+        <button id="addTaskButton">Ajouter</button>
+        <ul id="taskList"></ul>
+        <p id="taskCount">Tâches en cours : 0</p>
+        <section class="filter">
+            <button id="filterAllButton">Toutes</button>
+            <button id="filterActiveButton">Active</button>
+            <button id="filterCompletedButton">Terminées</button>
+            <button id="clearCompletedButton">Supprimer terminées</button>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
+        integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
