@@ -175,28 +175,58 @@ let pokemonInfo;
 
 //#region fetch post
 
-let data = { username: 'Bambino', password: 'Test1234=' }
+// let data = { username: 'Bambino', password: 'Test1234=' }
 
-let fetchOption = {
-    headers: {
-        // 'authorization' : 'token'
-        'Content-Type': 'application/json'
-    },
-    method: 'POST',
-    body: JSON.stringify(data)
-};
+// let fetchOption = {
+//     headers: {
+//         // 'authorization' : 'token'
+//         'Content-Type': 'application/json'
+//     },
+//     method: 'POST',
+//     body: JSON.stringify(data)
+// };
 
-fetch('https://pokeapi.co/api/v2/login', fetchOption)
-    .then((result) => {
-        if (result.ok) {
-            return result.json();
-        } else {
-            throw new Error(`${result.status} : ${result.statusText}`);
-        }
-    })
-    .then((response) => {
-        data = response;
-    })
-    .catch((e) => console.log(e));
+// fetch('https://pokeapi.co/api/v2/login', fetchOption)
+//     .then((result) => {
+//         if (result.ok) {
+//             return result.json();
+//         } else {
+//             throw new Error(`${result.status} : ${result.statusText}`);
+//         }
+//     })
+//     .then((response) => {
+//         data = response;
+//     })
+//     .catch((e) => console.log(e));
 
 //#endregion
+
+//#region fetch + DOM
+
+function faireUneRequeteHttp(url) {
+    return fetch(url)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('error');
+            }
+        });
+};
+
+const pokeList = document.getElementById('pokeList');
+
+function fillPokeList(pokemons) {
+
+    for (let i = 0; i < 20; i++) {
+        pokeList.children[i].innerHTML = pokemons.results[i].name;
+    };
+}
+
+function initList() {
+    faireUneRequeteHttp('https://pokeapi.co/api/v2/pokemon/')
+        .then((data) => {
+            pokemons = data;
+            fillPokeList(data);
+        });
+}
