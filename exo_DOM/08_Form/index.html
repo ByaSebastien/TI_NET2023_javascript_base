@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo Form</title>
+</head>
+
+<body>
+    <h1>Exo formulaire</h1>
+    <form method="post" name="myForm">
+        <input type="text" placeholder="Prenom" name="firstname" required>
+        <input type="text" placeholder="Nom" name="lastname">
+        <input type="text" placeholder="Code Postal" name="cp">
+        <input type="button" value="Submit" onclick="submitForm()">
+        <input type="button" value="Fill" onclick="fillForm()">
+        <input type="reset" value="Reset" onclick="resetForm()">
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

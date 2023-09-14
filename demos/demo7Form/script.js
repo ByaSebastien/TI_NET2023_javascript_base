@@ -1,5 +1,4 @@
 
-
 function login() {
     // const loginForm = document.forms['loginForm'];
     const loginForm = document.loginForm;
@@ -15,4 +14,3 @@ function login() {
     loginForm.submit();
     console.log('OK');
 }
-
