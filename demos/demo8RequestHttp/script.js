@@ -230,3 +230,11 @@ function initList() {
             fillPokeList(data);
         });
 }
+
+function next() {
+    faireUneRequeteHttp(pokemons.next)
+        .then((response) => {
+            pokemons = response;
+            fillPokeList(pokemons);
+        })
+}
